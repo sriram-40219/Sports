@@ -1,7 +1,7 @@
 # 🏆 Sports League Management System (SLMS)
 
 > **Skill Development Course (SDC) Project Submission**  
-> Problem Statement #50: Sports League Management System  
+> Problem Statement #55: Sports League Management System  
 > Built with: React Functional Components, HTML5, CSS3 (CSS Grid & Flexbox), and LocalStorage.
 
 ---
