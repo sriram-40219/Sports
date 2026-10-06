@@ -142,21 +142,6 @@ npm run preview
 
 ---
 
-## 🎤 6. Viva & Project Review Guide (Questions & Answers)
-
-**Q1: How does module-wise redirection work?**  
-> *Answer:* Role-based redirection is implemented in JavaScript via `AppContext`. When a user logs in, the system checks their role (`user.role === 'admin'`). If `admin`, `currentModule` is set to `'admin'` and `currentView` to `'dashboard'`. If `user`, it routes to the fan portal. Route guards prevent unauthorized users from accessing the admin controller.
-
-**Q2: How are league standings calculated?**  
-> *Answer:* Standings are dynamically aggregated using the `getStandingsForLeague()` function. It filters completed fixtures (`status === 'COMPLETED'`), calculates Points (Win = 3, Draw = 1, Loss = 0), Goals For/Against, and Goal Difference, and sorts clubs by Points descending, followed by Goal Difference.
-
-**Q3: How does the live score feature work?**  
-> *Answer:* The Admin Live Match Controller modifies the fixture's score, minute, and events in state and syncs to `localStorage`. Because both modules share the unified context, switching to the User Module immediately reflects the live score, pulse indicator, and events without page refreshes.
-
-**Q4: How is ticket booking handled with LocalStorage?**  
-> *Answer:* `bookTicket()` reserves the chosen seats, decrements available capacity on the fixture, creates a ticket receipt with a unique QR code identifier, appends it to `slms_tickets`, and dispatches an alert notification.
-
----
 
 ## 👨‍💻 SDC Project Evaluation Checklist
 - [x] Problem statement understood and documented
