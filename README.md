@@ -1,77 +1,34 @@
-# 🏆 Sports League Management System (SLMS)
+# 🏆 SportsHub - Sports League Management System (SLMS)
 
-> **Skill Development Course (SDC) Project Submission**  
-> **Problem Statement #50: Sports League Management System**  
-> **Full-Stack MERN Architecture (Review 2 Edition)**: React 18, Redux Toolkit (RTK Query), Node.js, Express, MongoDB Atlas, JWT Authentication, Third-Party Sports API & Vercel Production.
+SportsHub is a full-stack, enterprise-grade sports management and fan engagement platform built on the **MERN** stack (MongoDB, Express, React, Node.js), powered by **Redux Toolkit & RTK Query**, and secured with **JSON Web Tokens (JWT)**.
 
-[![Vercel Deployment](https://img.shields.io/badge/Deployment-Live%20on%20Vercel-success?style=for-the-badge&logo=vercel)](https://vercel.com)
-[![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB%20Atlas%20Cloud-green?style=for-the-badge&logo=mongodb)](https://cloud.mongodb.com)
-[![Redux Toolkit](https://img.shields.io/badge/State-Redux%20Toolkit%20%2B%20RTK%20Query-purple?style=for-the-badge&logo=redux)](https://redux-toolkit.js.org)
-[![JWT Auth](https://img.shields.io/badge/Auth-JWT%20%2B%20Bcrypt-blue?style=for-the-badge&logo=jsonwebtokens)](https://jwt.io)
-
----
-
-## 🚀 Review 2 Deliverables Matrix
-
-| # | Requirement | Implementation Status | Tech Stack / Architecture |
-| :--- | :--- | :---: | :--- |
-| **1** | **MongoDB Database** | ✅ **100% Completed** | Live **MongoDB Atlas Cloud Database** with Mongoose schemas for `Users`, `Leagues`, `Teams`, `Fixtures`, `Tickets`. |
-| **2** | **JWT Authentication** | ✅ **100% Completed** | Bcryptjs password hashing (10 salt rounds), signed 7-day JSON Web Tokens, `protect` & `adminOnly` route guards. |
-| **3** | **Redux API** | ✅ **100% Completed** | **Redux Toolkit (`@reduxjs/toolkit`)** & RTK Query `sportsApi` with caching, tag invalidation & `authSlice`. |
-| **4** | **Third-Party API** | ✅ **100% Completed** | Live **TheSportsDB API** integration (`useGetThirdPartySportsDataQuery`) displaying world leagues & team badges. |
-| **5** | **Vercel Deployment** | ✅ **100% Completed** | Serverless API bridge (`api/index.js`), cached Mongoose connection & production `vercel.json` rewrites. |
+[![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?style=flat&logo=react)](https://react.dev)
+[![Redux Toolkit](https://img.shields.io/badge/State-Redux%20Toolkit%20%2B%20RTK%20Query-764ABC?style=flat&logo=redux)](https://redux-toolkit.js.org)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js%20%26%20Express-339933?style=flat&logo=node.js)](https://nodejs.org)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?style=flat&logo=mongodb)](https://cloud.mongodb.com)
+[![JWT](https://img.shields.io/badge/Auth-JWT%20%2B%20Bcrypt-000000?style=flat&logo=jsonwebtokens)](https://jwt.io)
+[![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=flat&logo=vercel)](https://vercel.com)
 
 ---
 
-## ⏱️ 2 to 3 Minute Teacher Review Walkthrough
+## 📌 Features
 
-Need to present to your teacher in under 3 minutes? Follow this exact flow:
+### 👤 Fan & User Experience
+- **Live Match Center**: Real-time score ticker, match clock, possession and tactical stats, and a chronological incident commentary feed.
+- **Dynamic Standings Engine**: Automated points, wins, draws, losses, and goal difference calculations.
+- **Interactive Stadium Ticketing**: Interactive CSS Grid seating map with tiered pricing (VIP, Club, Bleachers) and instant digital ticket generation with dynamic QR code validation.
+- **Player & Squad Directory**: Complete team rosters, player profiles, and statistical leaderboards.
+- **World Sports Radar**: Third-party external API integration querying international leagues, stadiums, and team badges in real time.
 
-### 📑 Browser Setup (Keep 3 Tabs Open)
-1. **Tab 1: Live Production App** (Deployed on Vercel).
-2. **Tab 2: MongoDB Atlas Cloud** (`cloud.mongodb.com` ➔ Database ➔ Browse Collections).
-3. **Tab 3: GitHub Repository** (`github.com/sriram-40219/Sports`).
-
-### 🎬 Minute-by-Minute Presentation Script
-- **0:00 – 0:45 | Overview & Deployment**: Show your live Vercel URL. State the architecture: React 18, Redux Toolkit, Node/Express, MongoDB Atlas, JWT, and TheSportsDB API.
-- **0:45 – 1:30 | Core Features**: 
-  - Fan Portal: Show live match score ticker, dynamic standings table, and **Book Tickets** (CSS Grid stadium seating with dynamic QR code ticket pass).
-  - Admin Portal: Switch to Admin Module to demonstrate the **Live Match Controller** (+1/-1 scores, minute clock, incident broadcasting).
-- **1:30 – 2:15 | Redux & Third-Party API**: Click the **World Radar (API)** tab. Show live international data (Premier League, La Liga) fetched dynamically from **TheSportsDB** via **Redux RTK Query**.
-- **2:15 – 2:45 | Cloud Database & Security Proof**:
-  - Show MongoDB Atlas collections (`users`, `fixtures`, `tickets`).
-  - Open DevTools (`F12` ➔ Application ➔ LocalStorage) to show signed `jwt_token`.
-- **2:45 – 3:00 | Conclusion & Viva**: Invite questions.
-
-> 📖 **Full presentation scripts:**
-> - [Quick 2-Minute Review Cheat Sheet](docs/QUICK_REVIEW_GUIDE.md)
-> - [Comprehensive 3-Person Team SDC Presentation Guide](docs/SDC_PRESENTATION_GUIDE.md)
+### 🛡️ League Administration
+- **Tournament & League Provisioning**: Create and manage multi-sport tournaments, seasons, and rules.
+- **Team & Roster Management**: Provision competing clubs, manage player contracts, and assign home venues.
+- **Fixture Scheduling**: Clash-free calendar planning with venue assignment and ticket pricing.
+- **Live Match Controller**: Real-time score incrementing (+1 / -1), match clock management, and instant incident broadcasting.
 
 ---
 
-## 💡 Quick 5-Second Viva Answers
-
-| Question | What to Answer |
-| :--- | :--- |
-| **"Where is the database?"** | *"Hosted on **MongoDB Atlas Cloud Cluster** with Mongoose models for users, leagues, teams, fixtures, and tickets."* |
-| **"How is authentication secured?"** | *"Passwords hashed with **bcryptjs** (10 salt rounds); API endpoints guarded by **JWT Bearer tokens** using custom Express middleware."* |
-| **"Which third-party API did you use?"** | *"**TheSportsDB public API v1**, querying world leagues, stadiums, and badges dynamically via RTK Query."* |
-| **"Why Redux Toolkit?"** | *"Provides centralized predictable state (`authSlice`, `uiSlice`) and **RTK Query** for automated request caching and lifecycle management."* |
-| **"How does Vercel run the backend?"** | *"Using **Vercel Serverless Functions** (`api/index.js`) with an optimized cached MongoDB singleton connection and URL rewrite rules."* |
-
----
-
-## 📌 1. Problem Statement & Executive Summary
-
-A **Sports League Management System (SLMS)** provides sports governing bodies, tournament directors, club managers, and fans with a unified digital platform to automate and streamline tournament operations:
-
-- **Tournament Organizers (Admins)** eliminate paper-based management by digitally provisioning leagues, scheduling home-and-away fixtures, assigning match officials, and updating scores and incidents in real time.
-- **Fans and Spectators (Users)** enjoy interactive live match updates, automated points standings, club rosters, player leaderboards, stadium seat booking, and global sports coverage.
-- **Full-Stack Persistence**: Backed by a live cloud **MongoDB Atlas** database, protected by **JWT**, and accelerated on the frontend via **Redux Toolkit RTK Query**.
-
----
-
-## 🏢 2. System Architecture
+## 🏗️ Architecture & Technology Stack
 
 ```
                           ┌──────────────────────────────┐
@@ -95,54 +52,144 @@ A **Sports League Management System (SLMS)** provides sports governing bodies, t
                  ▼
      ┌───────────────────────┐
      │  MongoDB Atlas Cloud  │
-     │  (Collections & Schemas)│
+     │  (Mongoose Schemas)   │
      └───────────────────────┘
 ```
 
----
-
-## 🔐 3. Authentication & Security (JWT + Bcrypt)
-
-- **Registration & Login**: `POST /api/auth/register` and `POST /api/auth/login`.
-- **Password Protection**: Passwords are salted and hashed with **bcryptjs** (10 rounds) before hitting MongoDB.
-- **JWT Authorization**: Requests include `Authorization: Bearer <token>`.
-- **Pre-Configured Demo Accounts**:
-  - **Admin**: `admin@sports.com` / `admin123`
-  - **Fan**: `fan@sports.com` / `user123`
+- **Frontend**: React 18, Vite, Pure CSS (CSS Grid & Flexbox layouts, responsive design, zero UI framework bloat).
+- **State Management**: Redux Toolkit (`@reduxjs/toolkit`), RTK Query (`sportsApi`), slice-based auth and UI management.
+- **Backend API**: Node.js, Express.js REST API with modular routers and controllers.
+- **Database**: MongoDB Atlas Cloud, Mongoose ODM with validated schemas and pre-save password encryption.
+- **Authentication**: Stateless JSON Web Tokens (JWT) signed with secret keys, stored in client storage, and validated via Bearer authorization middleware.
+- **Third-Party API**: TheSportsDB public API integration for live global football league data.
+- **Deployment**: Vercel Serverless Functions (`api/index.js`) and Vite static production build.
 
 ---
 
-## 🌐 4. Third-Party API Integration (TheSportsDB)
+## 📂 Project Structure
 
-Accessible under the **World Radar (API)** tab in the Fan Portal:
-- Directly communicates with **TheSportsDB public API v1** via Redux RTK Query (`useGetThirdPartySportsDataQuery`).
-- Allows searching world tournaments: Premier League, La Liga, Serie A, Bundesliga, NBA, and IPL.
-- Dynamically renders real-world team badges, stadium names, locations, and descriptions.
+```
+Sports/
+├── api/
+│   └── index.js                 # Vercel serverless function entrypoint
+├── server/
+│   ├── middleware/
+│   │   └── authMiddleware.js    # JWT verification and role authorization
+│   ├── models/
+│   │   ├── Fixture.js           # Fixture & live incident schema
+│   │   ├── League.js            # League & season schema
+│   │   ├── Team.js              # Team and player roster schema
+│   │   ├── Ticket.js            # Stadium seat booking schema
+│   │   └── User.js              # User auth and bcrypt password hashing
+│   ├── routes/
+│   │   ├── authRoutes.js        # /api/auth/register, /api/auth/login, /api/auth/me
+│   │   ├── fixtureRoutes.js     # /api/fixtures CRUD and score updating
+│   │   ├── leagueRoutes.js      # /api/leagues CRUD
+│   │   ├── teamRoutes.js        # /api/teams CRUD
+│   │   └── ticketRoutes.js      # /api/tickets booking and user tickets
+│   ├── seed.js                  # Database seeder script
+│   └── server.js                # Express app configuration & DB connection
+├── src/
+│   ├── components/              # Shared navigation, footer, auth modal
+│   ├── context/                 # Application context fallbacks
+│   ├── data/                    # Initial seed data constants
+│   ├── modules/
+│   │   ├── admin/               # League, team, fixture, and live match controllers
+│   │   └── user/                # Fan dashboard, standings, tickets, world radar
+│   ├── redux/
+│   │   ├── api/sportsApi.js     # RTK Query service endpoints & external API
+│   │   ├── slices/              # authSlice, uiSlice
+│   │   └── store.js             # Central Redux store
+│   ├── App.jsx                  # Root application router
+│   ├── index.css                # Global theme, CSS Grid & Flexbox styling
+│   └── main.jsx                 # React root wrapped in Redux Provider
+├── package.json                 # Frontend dependencies and build scripts
+├── vercel.json                  # Production rewrite rules for serverless API
+└── vite.config.js               # Vite build configuration & local dev proxy
+```
 
 ---
 
-## 🚀 5. Deployment Setup
+## ⚙️ API Endpoints
 
-Your project has `vercel.json` and `api/index.js` already configured.
+### Authentication
+- `POST /api/auth/register` - Create a new user account (hashes password with bcrypt)
+- `POST /api/auth/login` - Authenticate user and return signed 7-day JWT token
+- `GET /api/auth/me` - Retrieve current user profile (requires Bearer token)
 
-### Environment Variables on Vercel:
-- `MONGO_URI`: `mongodb+srv://nsriramgoud746_db_user:SportsPass123@cluster0.yqubub4.mongodb.net/sports_league?retryWrites=true&w=majority`
-- `JWT_SECRET`: `super_secret_sports_league_jwt_key_2026_sdc`
+### Leagues & Teams
+- `GET /api/leagues` - List all active leagues
+- `POST /api/leagues` - Create a new tournament league (Admin only)
+- `GET /api/teams` - List teams with embedded player rosters
+- `POST /api/teams` - Create a new club franchise (Admin only)
+
+### Fixtures & Live Controller
+- `GET /api/fixtures` - List scheduled, live, and completed matches
+- `POST /api/fixtures` - Schedule a new match fixture (Admin only)
+- `PUT /api/fixtures/:id/score` - Live update match score and broadcast incidents (Admin only)
+
+### Ticketing
+- `POST /api/tickets/book` - Reserve stadium seats and generate QR ticket
+- `GET /api/tickets/my` - Fetch tickets booked by the authenticated user
 
 ---
 
-## 💻 6. Running Locally
+## 🚀 Getting Started
 
-### Start Backend:
+### Prerequisites
+- Node.js (v18.x or higher)
+- npm or yarn
+- MongoDB Atlas connection string
+
+### 1. Clone & Install Dependencies
+```bash
+git clone https://github.com/sriram-40219/Sports.git
+cd Sports
+
+# Install frontend dependencies
+npm install
+
+# Install backend dependencies
+cd server
+npm install
+cd ..
+```
+
+### 2. Configure Environment Variables
+Create a `.env` file in the `server/` directory:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key
+NODE_ENV=development
+```
+
+### 3. Run Locally
+
+**Start the Backend Server:**
 ```bash
 cd server
 npm start
-# Runs on http://localhost:5000
+# Server runs on http://localhost:5000
 ```
 
-### Start Frontend:
+**Start the Frontend App:**
 ```bash
-cd ..
+# In the root project directory
 npm run dev
-# Runs on http://localhost:3000
+# Application opens on http://localhost:3000
 ```
+
+---
+
+## 🌐 Production Deployment
+
+The project is structured for zero-configuration continuous deployment on **Vercel**:
+- Backend routes under `/api/*` are executed by Vercel Serverless Functions via `api/index.js`.
+- Frontend assets are compiled with Vite and served globally through Vercel's edge network.
+- Environment variables (`MONGO_URI` and `JWT_SECRET`) are configured directly in the Vercel Project Settings.
+
+---
+
+## 📄 License
+This project is open-source and available under the MIT License.
