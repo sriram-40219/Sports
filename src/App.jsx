@@ -14,6 +14,7 @@ import { PlayerStats } from './modules/user/PlayerStats';
 import { TicketBooking } from './modules/user/TicketBooking';
 import { MyTickets } from './modules/user/MyTickets';
 import { NewsFeed } from './modules/user/NewsFeed';
+import { ThirdPartySportsRadar } from './modules/user/ThirdPartySportsRadar';
 
 // Admin Module Components
 import { AdminDashboard } from './modules/admin/AdminDashboard';
@@ -33,6 +34,7 @@ import {
   Award,
   Ticket,
   Newspaper,
+  Globe,
   LayoutDashboard,
   DollarSign,
   ShieldCheck,
@@ -126,6 +128,14 @@ const MainApp = () => {
                 <Newspaper size={15} />
                 <span>News & Fan Poll</span>
               </button>
+              <button
+                className={`tab-btn ${currentView === 'world-radar' ? 'active' : ''}`}
+                onClick={() => setCurrentView('world-radar')}
+                style={{ borderColor: 'rgba(16, 185, 129, 0.4)' }}
+              >
+                <Globe size={15} color="var(--primary)" />
+                <span>World Radar (API)</span>
+              </button>
               {currentUser && (
                 <button
                   className={`tab-btn ${currentView === 'my-bookings' ? 'active' : ''}`}
@@ -209,6 +219,7 @@ const MainApp = () => {
             {currentView === 'tickets' && <TicketBooking />}
             {currentView === 'my-bookings' && <MyTickets />}
             {currentView === 'news' && <NewsFeed />}
+            {currentView === 'world-radar' && <ThirdPartySportsRadar />}
           </>
         ) : (
           <>
